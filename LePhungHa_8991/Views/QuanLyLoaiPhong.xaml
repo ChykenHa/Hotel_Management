@@ -1,0 +1,118 @@
+<Window x:Class="LePhungHa_8991.View.QuanLyLoaiPhong"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LePhungHa_8991.View"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Quản Lý Loại Phòng" Height="650" Width="1100">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="QUẢN LÝ LOẠI PHÒNG" FontSize="28" FontWeight="Bold" 
+                   Foreground="#F44336" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <Border Grid.Row="1" Background="White" CornerRadius="10" Padding="20" Margin="0,0,0,20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="2" Opacity="0.2"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                    <Label Content="Mã Loại Phòng:" FontWeight="Bold"/>
+                    <TextBox x:Name="txt_MaLoaiPhong" Height="35" Padding="5" FontSize="14"/>
+                    
+                    <Label Content="Tên Loại Phòng:" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <TextBox x:Name="txt_TenLoaiPhong" Height="35" Padding="5" FontSize="14"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="10,0">
+                    <Label Content="Giá Theo Giờ:" FontWeight="Bold"/>
+                    <TextBox x:Name="txt_GiaTheoGio" Height="35" Padding="5" FontSize="14"/>
+                    
+                    <Label Content="Giá Theo Ngày:" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <TextBox x:Name="txt_GiaTheoNgay" Height="35" Padding="5" FontSize="14"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Margin="10,0,0,0">
+                    <Label Content="Số Người Tối Đa:" FontWeight="Bold"/>
+                    <TextBox x:Name="txt_SoNguoiToiDa" Height="35" Padding="5" FontSize="14"/>
+                    
+                    <Label Content="Mô Tả:" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <TextBox x:Name="txt_MoTa" Height="80" Padding="5" FontSize="14" 
+                            TextWrapping="Wrap" AcceptsReturn="True"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Orientation="Horizontal" 
+                           HorizontalAlignment="Center" Margin="0,20,0,0">
+                    <Button Content="Thêm" Click="Them_Click" Width="100" Height="40" 
+                           Margin="5" Background="#4CAF50" Foreground="White" 
+                           FontWeight="Bold" BorderThickness="0" Cursor="Hand"/>
+                    <Button Content="Sửa" Click="Sua_Click" Width="100" Height="40" 
+                           Margin="5" Background="#2196F3" Foreground="White" 
+                           FontWeight="Bold" BorderThickness="0" Cursor="Hand"/>
+                    <Button Content="Xóa" Click="Xoa_Click" Width="100" Height="40" 
+                           Margin="5" Background="#F44336" Foreground="White" 
+                           FontWeight="Bold" BorderThickness="0" Cursor="Hand"/>
+                    <Button Content="Làm Mới" Click="LamMoi_Click" Width="100" Height="40" 
+                           Margin="5" Background="#FF9800" Foreground="White" 
+                           FontWeight="Bold" BorderThickness="0" Cursor="Hand"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBox x:Name="txt_TimKiem" Width="300" Height="35" 
+                        Padding="5" FontSize="14" Text="Tìm kiếm loại phòng..."/>
+                <Button Content="🔍 Tìm Kiếm" Click="TimKiem_Click" Width="120" Height="35" 
+                       Margin="10,0,0,0" Background="#9C27B0" Foreground="White" 
+                       FontWeight="Bold" BorderThickness="0" Cursor="Hand"/>
+            </StackPanel>
+
+            <DataGrid x:Name="dgv_LoaiPhong" Grid.Row="1" 
+                     AutoGenerateColumns="False" 
+                     IsReadOnly="True"
+                     SelectionMode="Single"
+                     SelectionChanged="dgv_LoaiPhong_SelectionChanged"
+                     CanUserAddRows="False"
+                     Background="White">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Mã LP" Binding="{Binding MaLoaiPhong}" Width="100"/>
+                    <DataGridTextColumn Header="Tên Loại Phòng" Binding="{Binding TenLoaiPhong}" Width="*"/>
+                    <DataGridTextColumn Header="Giá/Giờ" Binding="{Binding GiaTheoGio, StringFormat=N0}" Width="120"/>
+                    <DataGridTextColumn Header="Giá/Ngày" Binding="{Binding GiaTheoNgay, StringFormat=N0}" Width="120"/>
+                    <DataGridTextColumn Header="Số Người" Binding="{Binding SoNguoiToiDa}" Width="100"/>
+                    <DataGridTextColumn Header="Mô Tả" Binding="{Binding MoTa}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Tổng số loại phòng: " FontWeight="Bold" FontSize="14"/>
+                <TextBlock x:Name="txt_TongSo" Text="0" FontWeight="Bold" 
+                          FontSize="14" Foreground="#F44336" Margin="5,0"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

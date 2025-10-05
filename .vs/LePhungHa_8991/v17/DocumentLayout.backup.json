@@ -1,0 +1,80 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\LePhungHa_8991\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{084389D0-F574-4CC6-910E-08B3FE803F66}|LePhungHa_8991.csproj|d:\\lephungha_8991\\dangnhap.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{084389D0-F574-4CC6-910E-08B3FE803F66}|LePhungHa_8991.csproj|solutionrelative:dangnhap.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{084389D0-F574-4CC6-910E-08B3FE803F66}|LePhungHa_8991.csproj|d:\\lephungha_8991\\views\\trangchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{084389D0-F574-4CC6-910E-08B3FE803F66}|LePhungHa_8991.csproj|solutionrelative:views\\trangchu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{084389D0-F574-4CC6-910E-08B3FE803F66}|LePhungHa_8991.csproj|d:\\lephungha_8991\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{084389D0-F574-4CC6-910E-08B3FE803F66}|LePhungHa_8991.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DangNhap.xaml.cs",
+              "DocumentMoniker": "D:\\LePhungHa_8991\\DangNhap.xaml.cs",
+              "RelativeDocumentMoniker": "DangNhap.xaml.cs",
+              "ToolTip": "D:\\LePhungHa_8991\\DangNhap.xaml.cs",
+              "RelativeToolTip": "DangNhap.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-30T14:13:16.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TrangChu.xaml",
+              "DocumentMoniker": "D:\\LePhungHa_8991\\Views\\TrangChu.xaml",
+              "RelativeDocumentMoniker": "Views\\TrangChu.xaml",
+              "ToolTip": "D:\\LePhungHa_8991\\Views\\TrangChu.xaml",
+              "RelativeToolTip": "Views\\TrangChu.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-30T14:12:58.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\LePhungHa_8991\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "D:\\LePhungHa_8991\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-09-30T14:10:27.908Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<Window x:Class="LePhungHa_8991.DangNhap"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LePhungHa_8991"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Đăng Nhập - Quản Lý Khách Sạn" Height="500" Width="700" Background="#F0F0F0">
+    <Grid>
+        <Border Background="White" CornerRadius="10" Margin="50,30,50,30" Padding="40">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" ShadowDepth="3" Opacity="0.3"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="HỆ THỐNG QUẢN LÝ KHÁCH SẠN" 
+                          FontSize="28" FontWeight="Bold" 
+                          HorizontalAlignment="Center" 
+                          Foreground="#2196F3" Margin="0,0,0,40"/>
+                
+                <Label Content="Tên Đăng Nhập" FontSize="18" Margin="0,10,0,5"/>
+                <TextBox x:Name="txt_TenDN" FontSize="20" Height="45" 
+                        Padding="10" BorderThickness="2" BorderBrush="#2196F3"/>
+                
+                <Label Content="Mật Khẩu" FontSize="18" Margin="0,20,0,5"/>
+                <PasswordBox x:Name="txt_MatKhau" FontSize="20" Height="45" 
+                            Padding="10" BorderThickness="2" BorderBrush="#2196F3"/>
+                
+                <Button Content="ĐĂNG NHẬP" Click="DangNhap_Click" 
+                       FontSize="20" FontWeight="Bold" Height="55" 
+                       Margin="0,40,0,10" Background="#2196F3" 
+                       Foreground="White" BorderThickness="0" Cursor="Hand">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#2196F3"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#1976D2"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                
+                <Button Content="Thoát" Click="Thoat_Click" 
+                       FontSize="16" Height="45" 
+                       Background="#F44336" Foreground="White" 
+                       BorderThickness="0" Cursor="Hand">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#F44336"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#D32F2F"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
